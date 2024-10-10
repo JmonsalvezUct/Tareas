@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR.js with 3D Models</title>
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.0/aframe/build/aframe-
+ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+<a-scene embedded arjs>
+<!-- Marcador personalizado -->
+<a-marker preset="hiro">
+<!-- Cargamos un modelo 3D .gltf sobre el marcador -->
+<a-entity
+gltf-model="url(scene.gltf)"
+scale="0.1 0.1 0.1"
+position="0 0 0">
+</a-entity>
+</a-marker>
+<a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
